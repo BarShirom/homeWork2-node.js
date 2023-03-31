@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit user</title>
+    <link rel="stylesheet" href="./dist/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.js"
+        integrity="sha512-rozBdNtS7jw9BlC76YF1FQGjz17qQ0J/Vu9ZCFIW374sEy4EZRbRcUZa2RU/MZ90X2mnLU56F75VfdToGV0RiA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+
+<body>
+    <div id="allUsersContainer">
+        <label id="allUsersLabel">Get all users:</label>
+        <button id="allUsersBtn" onclick="handleGetAllUsers(event)">GET</button>
+        </div>
+
+    <div id="userByIdContainer">
+        <form onsubmit="handleGetUserById(event)">
+            <label id="userByIdLabel">Get user by ID:</label><br>
+            <input id="userByIdInput" type="text" placeholder="Enter user id">
+            <button id="userByIdBtn" type="submit">GET USER</button>
+            </form>
+        </div>
+        
+        <div id="addUserContainer">
+        <form onsubmit="handleAddNewUser(event)">
+            <label id="addUserLabel">Add user:</label><br>
+            <input id="firstNameInput" type="text" placeholder="Enter firs name"><br>
+            <input id="lastNameInput" type="text" placeholder="Enter last name"><br>
+            <input id="ageInput" type="number" placeholder="Enter age"><br>
+            <input id="idInput" type="text" placeholder="Enter ID number"><br>
+            <input id="addressInput" type="text" placeholder="Enter address"><br>
+            <button type="submit">ADD</button>
+        </form>
+    </div>
+
+    <div id="deleteUserContainer">
+        <form onsubmit="handleDeleteUserByName(event)">
+            <label id="deleteUserLabel">Delete user:</label><br>
+            <input id="deleteUserInput" type="text" placeholder="Enter user first name">
+            <button id="deleteUserBtn" type="submit">DELETE</button>
+        </form>
+    </div>
+
+     <div id="updateUserContainer">
+        <form onsubmit="handleUpdateUser(event)">
+            <label id="updateUserLabel">Update user information:</label>
+            <input id="userIdInput" type="text" placeholder="Enter user id"><br>
+            <input id="newFirstName" type="text" placeholder="Enter new name"><br>
+            <input id="newLastName" type="text" placeholder="Enter new last name"><br>
+            <input id="newAge" type="number" placeholder="Enter new age"><br>
+            <input id="newId" type="text" placeholder="Enter new ID"><br>
+            <input id="newAddress" type="text" placeholder="Enter new address"><br>
+            <button type="UpdateUserBtn">SUBMIT</button>
+        </form> 
+    </div>
+
+    <!-- <div id="updateUserContainer">
+        <form onsubmit="handleUpdateUser(event)">
+            <label id="updateUserLabel">Update user information</label><br>
+            <input id="userIdInput" type="text" placeholder="Enter user id">
+            <input id="newNameInput" type="text" placeholder="Enter new name">
+            <button type="UpdateUserBtn">SUBMIT</button>
+        </form> 
+    </div> -->
+
+    <div id="output"></div>
+
+</body>
+<script src="./dist/index.js"></script>
+
+</html>
